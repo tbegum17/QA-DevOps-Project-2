@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Home </h2>
+<br>
+<h3> This Book: </h3>
+<br>
+{{ books }}
+<br>
+<h3> Last 5 Books: </h3>
+<br>
+{% for books in past5 %}
+{{ books }}
+<br>
+{% endfor %}
+{% endblock body %}
