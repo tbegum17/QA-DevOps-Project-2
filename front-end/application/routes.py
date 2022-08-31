@@ -9,9 +9,9 @@ from datetime import date
 @app.route('/', methods = ['GET'])
 def home():
     book_name = requests.get('http://book-api:5000/get_book_name')
-    book_release_date = requests.get('http://date-api:5000/get_book_release_date')
-    book_author = requests.post('http://author-api:5000/get_effect', json = {"Book": book_name.text, "Date": book_release_date.date})
-    book = Books(book_name = event_name.text, book_release_date = book_release_date.date, book_author = author.text)
+    book_author = requests.get('http://author-api:5000/get_book_release_date')
+    book_release_date = requests.post('http://date-api:5000/get_effect', json = {"Book": book_name.text, "Author": book_author.text})
+    book = Books(book_name = event_name.text,  book_author = author.text, book_release_date = book_release_date.date)
     db.session.add(book)
     db.session.commit()
     past5 = Books.query.order_by(Books.id.desc()).limit(5).all()
