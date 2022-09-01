@@ -12,7 +12,7 @@ services:
         source: ./nginx.conf
         target: /etc/nginx/nginx.conf
     networks:
-      - events-net
+      - books-net
     depends_on:
       - front-end
   mysql:
@@ -21,13 +21,13 @@ services:
     build: ./book-db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: eventsdb
+      MYSQL_DATABASE: books-db
     volumes:
       - type: volume
-        source: events-vol
+        source: books-vol
         target: /var/lib/mysql
     networks:
-      - events-net
+      - books-net
   front-end:
     container_name: front-end
     image: tbegum15/front-end:latest
@@ -64,7 +64,7 @@ services:
     deploy:
       replicas: 3
     networks:
-      - books-net
+      - date-net
 volumes:
   books-vol:
 networks:
