@@ -1,0 +1,71 @@
+version: "3.8"
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    networks:
+      - events-net
+    depends_on:
+      - front-end
+  mysql:
+    container_name: mysql
+    image: tbegum15/book-gen-db:latest
+    build: ./book-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: eventsdb
+    volumes:
+      - type: volume
+        source: events-vol
+        target: /var/lib/mysql
+    networks:
+      - events-net
+  front-end:
+    container_name: front-end
+    image: tbegum15/front-end:latest
+    build: ./front-end
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    networks:
+      - books-net
+    depends_on:
+      - mysql
+      - book-api
+      - author-api
+      - date-api
+  book-api:
+    #container_name: book-api
+    image: tbegum15/name-api:latest
+    build: ./name-api
+    deploy:
+      replicas: 3
+    networks:
+      - books-net
+  author-api:
+    #container_name: author-api
+    image: tbegum15/unit-api:latest
+    build: ./author-api
+    deploy:
+      replicas: 3
+    networks:
+      - author-net
+  effect-api:
+    #container_name: date-api
+    image: tbegum15/date-api:latest
+    build: ./date-api
+    deploy:
+      replicas: 3
+    networks:
+      - books-net
+volumes:
+  books-vol:
+networks:
+  books-net:
