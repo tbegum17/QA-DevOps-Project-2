@@ -18,9 +18,9 @@ services:
   mysql:
     container_name: mysql
     image: tbegum15/book-gen-db:latest
-    build: ./book-db
+    build: ./books-db
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: books-db
     volumes:
       - type: volume
@@ -33,7 +33,7 @@ services:
     image: tbegum15/front-end:latest
     build: ./front-end
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: root
     networks:
       - books-net
     depends_on:
@@ -43,28 +43,28 @@ services:
       - date-api
   book-api:
     #container_name: book-api
-    image: tbegum15/name-api:latest
-    build: ./name-api
+    image: tbegum15/book-api:latest
+    build: ./book-api
     deploy:
       replicas: 3
     networks:
       - books-net
   author-api:
     #container_name: author-api
-    image: tbegum15/unit-api:latest
+    image: tbegum15/author-api:latest
     build: ./author-api
     deploy:
       replicas: 3
     networks:
-      - author-net
-  effect-api:
+      - books-net
+  date-api:
     #container_name: date-api
     image: tbegum15/date-api:latest
     build: ./date-api
     deploy:
       replicas: 3
     networks:
-      - date-net
+      - books-net
 volumes:
   books-vol:
 networks:
