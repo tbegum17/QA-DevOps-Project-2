@@ -1,22 +1,25 @@
 pipeline {
-    agent any
-      environment{
-        DATABASE_URI=credentials('DATABASE_URI')
-        MYSQL_ROOT_PASSWORD=credentials('MYSQL_ROOT_PASSWORD')
-        MYSQL_DATABASE=credentials('MYSQL_DATABASE')
-        USERNAME=credentials('USERNAME')
-        PASSWORD=credentials('PASSWORD')
-    }
-    stages{
-        stage('Setup Jenkins VM'){
-            steps{
-                sh 'sudo apt install python3 python3-pip python3-venv -y'
+    agent any {
+       stages {
+
+        stage('Build and push images') {
+            environment {
+                DOCKER_UNAME = credentials('tbegum15')
+                DOCKER_PWORD = credentials('Docker@2345')
+            }
+            steps {
+                sh "docker-compose build --parallel"
+                sh "docker login -u $DOCKER_UNAME -p $DOCKER_PWORD"
+                sh "docker-compose push"
             }
         }
-
-        stage('Docker Swarm and NGINX Load Balancer'){
-            steps{
-                sh 'ansible-playbook -i inventory.yaml playbook.yaml -e DATABASE_URI=${DATABASE_URI} -e MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} -e MYSQL_DATABASE=${MYSQL_DATABASE} -e USERNAME=${USERNAME} -e PASSWORD=${PASSWORD}'
+        stage('Deploy') {
+            steps {
+                sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yaml swarm-master:/home/jenkins/docker-compose.yaml"
+                sh "scp -i ~/.ssh/ansible_id_rsa nginx.conf swarm-master:/home/jenkins/nginx.conf"
+                sh "ansible-playbook -i configuration/inventory.yaml configuration/playbook.yaml"
+            }
+        } 
     }
          
 }
