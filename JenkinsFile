@@ -1,6 +1,6 @@
 pipeline {
     agent any {
-       stages {
+    stages {
 
         stage('Build and push images') {
             environment {
@@ -13,6 +13,7 @@ pipeline {
                 sh "docker-compose push"
             }
         }
+        
         stage('Deploy') {
             steps {
                 sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yaml swarm-master:/home/jenkins/docker-compose.yaml"
