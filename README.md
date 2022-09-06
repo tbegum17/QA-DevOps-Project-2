@@ -16,9 +16,9 @@
     - This service receives HTTP POST requests from service 1 and shows the randomly selected book name and date as JSON objects. 
     - Service 4 will use the name of book and author to determine the release date of the book.
 
-## Trello Board
-
 ## Risk Assessment
+
+## Trello Board
 
 ## Application
 
