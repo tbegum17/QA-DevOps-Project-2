@@ -8,6 +8,10 @@
 - Front-end (Service 1):
 	- The service where the user interacts with the application
 	- This sends requests to the other services to make different books and shows this to users and storing them in the database
+- Book Name API (Service 2): 
+   - This service receives HTTP GET requests from service 1 and responds with a randomly selected book name chosen from a list
+
+
 
 
 
