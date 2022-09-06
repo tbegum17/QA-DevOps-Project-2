@@ -25,7 +25,7 @@ class TestBase(TestCase):
         db.create_all()
 
         # Create test event
-        sample1 = Books(book_name="", book_author="", book_release_date=date(2021, 6, 3))
+        sample1 = Books(book_name="Shatter Me", book_author="Taherah Mafi", book_release_date=date(2012-06-08))
 
         # save event to database
         db.session.add(sample1)
