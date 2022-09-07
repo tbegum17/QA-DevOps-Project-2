@@ -29,7 +29,10 @@ In order to track the progress of the project, this was completed with the use o
 
 
 ## Application
-This is the application that was created for this project. On this users can essentially pick a book and from there will tell them the date that this particular book will be released. 
+This is the application that was created for this project. On this users can essentially go onto the page and find out information about a particular book. The information that is being shown for this generator is the name of the book, the author of the book and the date that it will be released.
+<p>
+<img src = "https://user-images.githubusercontent.com/60227889/188863642-880b0434-a73b-4c67-bb25-2901696c6c60.png" widith="1000">
+
 
 ## Jenkins Pipeline
 For this application, an Jenkins Pipeline was produced to get the docker images pushed within the background of the application. This pipeline also produces the docker images that are required in order for the application to run. 
