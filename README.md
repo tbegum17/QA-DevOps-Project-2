@@ -35,13 +35,20 @@ This is the application that was created for this project. On this users can ess
 
 
 ## Jenkins Pipeline
-For this application, an Jenkins Pipeline was produced to get the docker images pushed within the background of the application. This pipeline also produces the docker images that are required in order for the application to run. 
+For this application, an Jenkins Pipeline was produced to get the docker images pushed within the background of the application as well produces the docker images that are required in order for the application to run. This pipeline was also made to complete unit testing for the application and - you can see on the image below that the testing completed was done rapidly.
 <p>
-<img src = "https://user-images.githubusercontent.com/60227889/188704569-e32c317b-7822-4cac-9b9a-ab0bd7db89d0.png" widith="1000">
-
+<img src = "https://user-images.githubusercontent.com/60227889/188913067-4e83c7df-e2d0-432d-8b5c-e10cdffb7aa6.png"
 
 ## Testing
+Testing was completed to help indicate whether the application was functioning and completing the relevant procedures it was required to do. Testing was completed for all four microservices and - the methods that were used to complete these tests were unit and mock testing. 
 
+### Front End
+
+### Books
+
+### Author
+
+### Date
 
 
 
