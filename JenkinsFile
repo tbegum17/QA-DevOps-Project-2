@@ -13,6 +13,12 @@ pipeline {
                 sh "docker-compose push"
             }
         }
+
+        stage('Run unit tests') {
+            steps {
+                sh "bash test.sh"
+            }
+        }
         
 
          
