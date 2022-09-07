@@ -40,7 +40,7 @@ For this application, an Jenkins Pipeline was produced to get the docker images 
 <img src = "https://user-images.githubusercontent.com/60227889/188913067-4e83c7df-e2d0-432d-8b5c-e10cdffb7aa6.png"
 
 
-## Application
+### Testing
 Testing was completed to help indicate whether the application was functioning and completing the relevant procedures it was required to do. Testing was completed for all four microservices and - the methods that were used to complete these tests were unit and mock testing. 
 
 ### Front End
