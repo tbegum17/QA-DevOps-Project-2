@@ -129,3 +129,14 @@ dmypy.json
 .pyre/
 
 *.db
+
+
+# pytest
+.pytest_cache/
+
+# application
+__pycache__/
+
+front-end/application/__pycache__/routes.cpython-36.pyc
+front-end/application/__pycache__/__init__.cpython-36.pyc
+front-end/application/__pycache__/models.cpython-36.pyc
