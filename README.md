@@ -96,7 +96,8 @@ Below is the testing that was completed for the date api. On this it shows that 
 ## Future Improvements
 For this project, there are some future improvements that would be recommended for future reference or if this project was to be completed. 
 - One future improvement would be to get my app deployed via Jenkins. This was attempted in the project but the SSH key kept getting denied and - it essentially would not allow the app to deploy on there therefore, for next time this can be included. 
-- Another one would be to include more ansible playbooks in the project would be an improvement too as only one playbook was added in the project. 
+- Another one would be to include more ansible playbooks in the project would be an improvement too such as one for installing docker or jenkins as only one playbook was added in the project which was to run docker swarm.
+- Furthermore, having the application be more user-friendly and including more HTML features as right now it is a very basic design and may not attract many users to go on it. 
 
 
 
