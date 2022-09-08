@@ -2,7 +2,7 @@
 ## Author - Tasnim Begum
 ## Project Objective
 - Create an application that has four microservices which interact with one another to make objects using some defined logic.
-- The application will be a books generator to show the different books that are going to be released
+- The application will be a books generator to show the different books that are going to be released as well as a date for them to be released.
 
 ### Microservice Architecture
 - Front-end (Service 1):
@@ -16,7 +16,9 @@
     - This service receives HTTP POST requests from service 1 and shows the randomly selected book name and date as JSON objects. 
     - Service 4 will use the name of book and author to determine the release date of the book.
 <p>
-Additionally, a database will be created to show 
+Additionally, a database will be created for the sole purpose of saving all of the data that the application is going to be making and show the history of the last 5 books that have been presented within the application. The Entity Diagram for the database can be seen below:
+<p>
+
 
 ## Risk Assessment
 Once there was an overall idea for what the application will be, a risk assessement table was created to illustrate the various risks that can occur throughout the duration of the project. This was made to ensure that any risks that were to occur during the project were reduced and able to resolve any risks that were to occur in the project.
