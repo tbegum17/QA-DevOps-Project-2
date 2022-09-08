@@ -15,6 +15,8 @@
 - Date API (Service 4):
     - This service receives HTTP POST requests from service 1 and shows the randomly selected book name and date as JSON objects. 
     - Service 4 will use the name of book and author to determine the release date of the book.
+<p>
+Additionally, a database will be created to show 
 
 ## Risk Assessment
 Once there was an overall idea for what the application will be, a risk assessement table was created to illustrate the various risks that can occur throughout the duration of the project. This was made to ensure that any risks that were to occur during the project were reduced and able to resolve any risks that were to occur in the project.
@@ -29,9 +31,13 @@ In order to track the progress of the project, this was completed with the use o
 
 
 ## Application
-This is the application that was created for this project. On this users can essentially go onto the page and find out information about a particular book. The information that is being shown for this generator is the name of the book, the author of the book and the date that it will be released.
+This is the application that was created for this project showing the four microservices made. On this users can essentially go onto the page and find out information about a particular book. The information that is being shown for this generator is the name of the book, the author of the book and the date that it will be released. 
 <p>
 <img src = "https://user-images.githubusercontent.com/60227889/188863642-880b0434-a73b-4c67-bb25-2901696c6c60.png" widith="1000">
+
+<p>
+In addition to these four services on the application, NGINX was made that is being used for the reverse proxy. The NGINX service listens to port 80 on the machine and essentially directs traffic from port 80 on the host to port 5000 on the front end container where the app is being accessed. Moreover, docker swarm has been used in running the application through using a swarmmaster and swarmworker VM. This was created and currently running with the use of Ansible.  
+
 
 
 ## Jenkins Pipeline
