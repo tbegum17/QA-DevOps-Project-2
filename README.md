@@ -16,7 +16,13 @@
     - This service receives HTTP POST requests from service 1 and shows the randomly selected book name and date as JSON objects. 
     - Service 4 will use the name of book and author to determine the release date of the book.
 <p>
+<img src = "https://user-images.githubusercontent.com/60227889/189104266-7ab659e6-399d-4be2-835e-d246ea26d64c.png" widith="1000">
+
+<p>
 Additionally, a database will be created for the sole purpose of saving all of the data that the application is going to be making and show the history of the last 5 books that have been presented within the application. The Entity Diagram for the database can be seen below:
+<p>
+<img src = "https://user-images.githubusercontent.com/60227889/189088573-9be4e457-b55f-42cd-bff3-8e3ee17a0a20.png" widith="1000">
+
 <p>
 
 
