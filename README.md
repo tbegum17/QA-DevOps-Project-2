@@ -49,7 +49,7 @@ In addition to these four services on the application, NGINX was made that is be
 
 ## CI/CD Pipeline
 ### GitHub
-Github was used for version control and to host the repository. Four branch were created for the project which were main, dev, dev2 and testing. This was to ensure that there was a stable version of the project and - if anything was to go wrong it would not affect the main branch. Below is a brief diagram indicating of how each branch played a part in the project. 
+Github was used for version control and to host the repository. Four branches were created for the project which were main, dev, dev2 and testing. This was to ensure that there was a stable version of the project and - if anything was to go wrong it would not affect the main branch. Below is a brief diagram indicating of how each branch played a part in the project. 
 <p>
 <img src = "https://user-images.githubusercontent.com/60227889/189155546-c69d679c-9ad5-45da-87de-775011102e21.png">
 <p>
