@@ -24,9 +24,17 @@ class TestBase(TestCase):
         # Create table
         db.create_all()
 
-        # Create test event
-        sample1 = Books(book_name="Shatter Me", book_author="Taherah Mafi", book_release_date=date(2012-06-08))
+        # Create test book
+        sample1 = Books(book_name="Shatter Me", book_author="Taherah Mafi", book_release_date="2012-06-08")
 
-        # save event to database
+        # save book to database
         db.session.add(sample1)
         db.session.commit()
+
+    def tearDown(self):
+        """
+        Will be called after every test
+        """
+
+        db.session.remove()
+        db.drop_all()
