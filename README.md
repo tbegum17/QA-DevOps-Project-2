@@ -59,23 +59,25 @@ For this application, an Jenkins Pipeline was produced to get the docker images 
 Testing was completed to help indicate whether the application was functioning and completing the relevant procedures it was required to do. Testing was completed for all four microservices and - the methods that were used to complete these tests were unit and mock testing. 
 
 ### Front End
-Below is the testing that was completed for the front end. On this it indicates that the tests completed were successful and there was 100% coverage for all the tests completed. This was done with mock and unit testing. The files that were tested were __init__.py, models.py and routes.py. 
+Below is the testing that was completed for the front end. On this it indicates that the tests completed were successful and there was 100% coverage for all the tests completed. This was done with mock and unit testing. The files that were tested were ___init___.py, models.py and routes.py. 
 
 ![image](https://user-images.githubusercontent.com/60227889/189110873-622f2c7a-ea94-44b4-9b5a-0aaab106d54e.png)
 
 
 ### Books
-Below is the testing that was completed for the books api. On this it shows that the tests that was done was successful. With the tests completed they also had 100% coverage meaning that the tests went well in all areas of the book api. The files that were tested were __init__.py and routes.py.
+Below is the testing that was completed for the books api. On this it shows that the tests that was done was successful and there are no faults with the book-api. With the tests completed they also had 100% coverage meaning that the tests went well in all areas of the book api. The files that were tested were __init__.py and routes.py. This was done with unit testing. 
 
 ![image](https://user-images.githubusercontent.com/60227889/188916492-ce806b75-a5a2-480c-b036-d07172c3648d.png)
 
 
 ### Author
+Below is the testing that was completed for the author api. On this it shows that the tests that was done was successful and there are no faults with the author-api. With the tests completed they also had 100% coverage meaning that the tests went well in all areas of the book api. The files that were tested were __init__.py and routes.py. This was done with unit testing. 
 
 ![image](https://user-images.githubusercontent.com/60227889/188917205-b5ef58fc-ba21-4b8f-8378-82d2f593b34b.png)
 
 
 ### Date
+Below is the testing that was completed for the date api. On this it shows that the tests that was done was successful and there are no faults with the author-api. With the tests completed they also had 100% coverage meaning that the tests went well in all areas of the date api. The files that were tested were __init__.py and routes.py. This was done with unit testing. 
 ![image](https://user-images.githubusercontent.com/60227889/188917258-a58a917a-410f-421f-97e8-bfd0b0935e7f.png)
 
 
