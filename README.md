@@ -47,8 +47,21 @@ This is the application that was created for this project showing the four micro
 In addition to these four services on the application, NGINX was made that is being used for the reverse proxy. The NGINX service listens to port 80 on the machine and essentially directs traffic from port 80 on the host to port 5000 on the front end container where the app is being accessed. Moreover, docker swarm has been used in running the application through using a swarmmaster and swarmworker VM. This was created and currently running with the use of Ansible.  
 
 
+## CI/CD Pipeline
+### GitHub
+Github was used for version control and to host the repository. Four branch were created for the project which were main, dev, dev2 and testing. This was to ensure that there was a stable version of the project and - if anything was to go wrong it would not affect the main branch. Below is a brief diagram indicating of how each branch played a part in the project. 
+<p>
+<img src = "https://user-images.githubusercontent.com/60227889/189155546-c69d679c-9ad5-45da-87de-775011102e21.png">
+<p>
+The Main branch was used for Jenkins, dev was used for dockerswarm and ansible, dev2 was used for amending the app and testing was to complete the tests for the project. 
 
-## Jenkins Pipeline
+### Development Environment
+How the application was developed was via a Ubuntu virtual machine which was hosted on GCP which can be accessed on VS Code. VS code was the main area where the coding and implementation of the application was completed. Three different VMs were created for this project which was a project vm, jenkins vm and a swarm worker vm.
+<p>
+<img src = "https://user-images.githubusercontent.com/60227889/189157095-509037ee-7edc-49a1-b8f0-94aa3149158c.png">
+
+
+### Jenkins Pipeline
 For this application, an Jenkins Pipeline was produced to get the docker images pushed within the background of the application as well produces the docker images that are required in order for the application to run. This pipeline was also made to complete unit testing for the application and - you can see on the image below that the testing completed was done rapidly.
 <p>
 <img src = "https://user-images.githubusercontent.com/60227889/188913067-4e83c7df-e2d0-432d-8b5c-e10cdffb7aa6.png"
@@ -79,6 +92,11 @@ Below is the testing that was completed for the author api. On this it shows tha
 ### Date
 Below is the testing that was completed for the date api. On this it shows that the tests that was done was successful and there are no faults with the author-api. With the tests completed they also had 100% coverage meaning that the tests went well in all areas of the date api. The files that were tested were __init__.py and routes.py. This was done with unit testing. 
 ![image](https://user-images.githubusercontent.com/60227889/188917258-a58a917a-410f-421f-97e8-bfd0b0935e7f.png)
+
+## Future Improvements
+For this project, there are some future improvements that would be recommended for future reference or if this project was to be completed. 
+- One future improvement would be to get my app deployed via Jenkins. This was attempted in the project but the SSH key kept getting denied and - it essentially would not allow the app to deploy on there therefore, for next time this can be included. 
+- Another one would be to include more ansible playbooks in the project would be an improvement too as only one playbook was added in the project. 
 
 
 
